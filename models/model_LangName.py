@@ -50,6 +50,7 @@ class LangName(models.Model):
                         "\""])
 
     class Meta(object):
+        app_label = "languages"
         unique_together     = (("source_lang", "object_lang"),
                                ("source_lang", "name"))
         verbose_name        = "Localized Language Name"

@@ -53,6 +53,7 @@ class ExprTrans(models.Model):
                          self.reading)])
 
     class Meta(object):
+        app_label = "languages"
         unique_together = (('language'), ('expression'))
         verbose_name        = "Localized Expression"
         verbose_name_plural = "Localized Expressions"

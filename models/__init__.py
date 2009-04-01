@@ -2,26 +2,39 @@
 # -*- coding: utf-8 -*-
 
 # django-languages: models/__init__.py
+#
+# Based on code from:
+#   <http://www.ifisgeek.com/2009/01/26/splitting-django-models-into-separate-files/>
 ##
 
-##
-# Note: EVERY model has an implicit AutoField named 'id' which acts as the
-#       primary key.  In some cases (LangName, for example) this field is
-#       entirely redundant and never explicitly used, nor is it mentioned in
-#       the comments.  However it would be complicated to try to define our
-#       own compound primary keys in a portable, safe, extensible, future-
-#       proof way (in django).  Additionally, having an AutoField anyway makes
-#       it much easier to deal with candidate keys that change value over
-#       time, and past experience teaches that one should never assume any
-#       meaningful data to remain constant.
-##
-
-from django.db import models
-
-from model_ExprId    import *
-from model_ExprTrans import *
-from model_LangId    import *
-from model_LangName  import *
+import os
+import re
+import types
+import unittest
+ 
+PACKAGE = 'languages.models'
+MODEL_RE = r"^.*.py$"
+ 
+# Search through every file inside this package.
+model_names = []
+model_dir = os.path.dirname(__file__)
+for filename in os.listdir(model_dir):
+    if not re.match(MODEL_RE, filename) or filename == "__init__.py":
+        continue
+    # Import the model file and find all clases inside it.
+    model_module = __import__('%s.%s' % (PACKAGE, filename[:-3]),
+                              {}, {},
+                              filename[:-3])
+    for name in dir(model_module):
+        item = getattr(model_module, name)
+        if not isinstance(item, (type, types.ClassType)):
+            continue
+        # Found a model, bring into the module namespace.
+        exec "%s = item" % name
+        model_names.append(name)
+ 
+# Hide everything other than the classes from other modules.
+__all__ = model_names
 
 # End of File
 ##

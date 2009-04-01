@@ -8,6 +8,18 @@ from django.db import models
 
 from model_LangName import LangName
 
+##
+# Note: EVERY model has an implicit AutoField named 'id' which acts as the
+#       primary key.  In some cases (LangId, for example) this field is
+#       entirely redundant and never explicitly used, nor is it mentioned in
+#       the comments.  However it would be complicated to try to define our
+#       own compound primary keys in a portable, safe, extensible, future-
+#       proof way (in django).  Additionally, having an AutoField anyway makes
+#       it much easier to deal with candidate keys that change value over
+#       time, and past experience teaches that one should never assume any
+#       meaningful data to remain constant.
+##
+
 class LangId(models.Model):
     """
     A type consisting of values that uniquely represent a human language.
@@ -49,6 +61,7 @@ class LangId(models.Model):
         return "%s" % self.id
 
     class Meta(object):
+        app_label = "languages"
         verbose_name        = "Language Identifier"
         verbose_name_plural = "Language Identifiers"
 
