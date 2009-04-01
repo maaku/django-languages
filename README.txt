@@ -1,4 +1,4 @@
-: django-languages: __init__.py
+: django-languages: README.txt
 ::
 
 Stay tuned...
