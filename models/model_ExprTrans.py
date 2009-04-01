@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# django-languages: model_ExprTrans.py
+# django-languages: models/model_ExprTrans.py
 ##
 
 from django.db import models

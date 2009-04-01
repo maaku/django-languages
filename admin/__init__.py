@@ -1,24 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# django-languages: admin.py
+# django-languages: admin/__init__.py
 ##
 
 from django.contrib import admin
 
-from model_ExprId    import ExprId
-from admin_ExprId    import ExprIdAdmin
-from model_ExprTrans import ExprTrans
-from admin_ExprTrans import ExprTransAdmin
-from model_LangId    import LangId
-from admin_LangId    import LangIdAdmin
-from model_LangName  import LangName
-from admin_LangName  import LangNameAdmin
-
-admin.site.register(ExprId,       ExprIdAdmin)
-admin.site.register(ExprTrans, ExprTransAdmin)
-admin.site.register(LangId,       LangIdAdmin)
-admin.site.register(LangName,   LangNameAdmin)
+from admin_ExprId    import *
+from admin_ExprTrans import *
+from admin_LangId    import *
+from admin_LangName  import *
 
 # End of File
 ##

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# django-languages: model_ExprId.py
+# django-languages: models/model_ExprId.py
 ##
 
 from django.db import models

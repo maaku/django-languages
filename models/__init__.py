@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# django-languages: models.py
+# django-languages: models/__init__.py
 ##
-
-from django.db import models
 
 ##
 # Note: EVERY model has an implicit AutoField named 'id' which acts as the
@@ -17,6 +15,8 @@ from django.db import models
 #       time, and past experience teaches that one should never assume any
 #       meaningful data to remain constant.
 ##
+
+from django.db import models
 
 from model_ExprId    import *
 from model_ExprTrans import *

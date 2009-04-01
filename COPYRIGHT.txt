@@ -1,4 +1,4 @@
-: django-languages: COPYRIGHT
+: django-languages: COPYRIGHT.txt
 ::
 
 If you have contributed to django-languages, you deserve to be on this list.
