@@ -5,7 +5,7 @@
 ##
 
 from django.contrib import admin
-from models import ExprId
+from languages.models import ExprId
 
 class ExprIdAdmin(admin.ModelAdmin):
     pass

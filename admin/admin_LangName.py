@@ -5,7 +5,7 @@
 ##
 
 from django.contrib import admin
-from models import LangName
+from languages.models import LangName
 
 class LangNameAdmin(admin.ModelAdmin):
     pass

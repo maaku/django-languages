@@ -5,7 +5,7 @@
 ##
 
 from django.contrib import admin
-from models import ExprTrans
+from languages.models import ExprTrans
 
 class ExprTransAdmin(admin.ModelAdmin):
     pass
