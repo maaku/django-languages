@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+##
 # django-languages: admin/admin_ExprTrans.py
 ##
 
@@ -12,5 +13,6 @@ class ExprTransAdmin(admin.ModelAdmin):
 
 admin.site.register(ExprTrans, ExprTransAdmin)
 
+##
 # End of File
 ##

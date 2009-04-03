@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+##
 # django-languages: models/model_LangName.py
 ##
 
@@ -56,5 +57,6 @@ class LangName(models.Model):
         verbose_name        = "Localized Language Name"
         verbose_name_plural = "Localized Language Names"
 
+##
 # End of File
 ##

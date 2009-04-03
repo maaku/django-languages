@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+##
 # django-languages: models/model_ExprTrans.py
 ##
 
@@ -58,5 +59,6 @@ class ExprTrans(models.Model):
         verbose_name        = "Localized Expression"
         verbose_name_plural = "Localized Expressions"
 
+##
 # End of File
 ##

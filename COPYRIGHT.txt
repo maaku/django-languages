@@ -1,3 +1,4 @@
+::
 : django-languages: COPYRIGHT.txt
 ::
 
@@ -8,5 +9,6 @@ django-languages is Copyright (C) 2009 by the following:
 
 Mark Friedenbach
 
+::
 : End of File
 ::

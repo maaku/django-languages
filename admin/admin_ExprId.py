@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+##
 # django-languages: admin/admin_ExprId.py
 ##
 
@@ -12,5 +13,6 @@ class ExprIdAdmin(admin.ModelAdmin):
 
 admin.site.register(ExprId, ExprIdAdmin)
 
+##
 # End of File
 ##

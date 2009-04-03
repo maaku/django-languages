@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+##
 # django-languages: admin/admin_LangName.py
 ##
 
@@ -12,5 +13,6 @@ class LangNameAdmin(admin.ModelAdmin):
 
 admin.site.register(LangName, LangNameAdmin)
 
+##
 # End of File
 ##
